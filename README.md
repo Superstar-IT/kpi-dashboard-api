@@ -43,6 +43,9 @@ $ cd kpi-dashboard-api
 $ cp env-example .env
 $ yarn install
 
+# Run migration
+$ npm run migration:run
+
 # development
 $ yarn run start
 
@@ -66,6 +69,25 @@ $ yarn run test:e2e
 
 # test coverage
 $ yarn run test:cov
+```
+
+## Database utils
+
+```bash
+# Generate migration
+$ npm run migration:generate -- src/database/migrations/CreateNameTable
+
+# Run migration
+$ npm run migration:run
+
+# Revert migration
+$ npm run migration:revert
+
+# Drop all tables in database
+$ npm run schema:drop
+
+# Run seed
+$ npm run seed:run
 ```
 
 ## Support
