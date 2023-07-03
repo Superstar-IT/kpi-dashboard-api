@@ -26,15 +26,23 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Tech Stacks
+
+- TypeScript
+- [Nest](https://github.com/nestjs/nest)
+- [TypeORM](https://typeorm.io/)
+- [Swagger](https://swagger.io/)
+- [Class-validator](https://github.com/typestack/class-validator)
+- [Supabase](https://supabase.com/docs)
+
+## Quick run
 
 ```bash
+$ git clone https://github.com/Superstar-IT/kpi-dashboard-api.git
+$ cd kpi-dashboard-api
+$ cp env-example .env
 $ yarn install
-```
 
-## Running the app
-
-```bash
 # development
 $ yarn run start
 
@@ -44,6 +52,8 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+
+Once the application is running you can visit http://localhost:5000/api/document to see the Swagger interface.
 
 ## Test
 
