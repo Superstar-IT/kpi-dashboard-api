@@ -6,4 +6,7 @@ export class PaginatorDto<T> {
 
   @ApiProperty({ type: Boolean })
   hasNextPage: boolean;
+
+  @ApiProperty({ type: Number })
+  count: number;
 }

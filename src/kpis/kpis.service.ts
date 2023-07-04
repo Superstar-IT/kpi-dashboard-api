@@ -29,8 +29,8 @@ export class KpisService {
 
   async findManyKpisWithPagination(
     paginationOptions: IPaginationOptions,
-  ): Promise<KpiEntity[]> {
-    return await this.kpiRepository.find({
+  ): Promise<[KpiEntity[], number]> {
+    return await this.kpiRepository.findAndCount({
       skip: (paginationOptions.page - 1) * paginationOptions.limit,
       take: paginationOptions.limit,
       order: {
