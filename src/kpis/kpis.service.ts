@@ -33,6 +33,9 @@ export class KpisService {
     return await this.kpiRepository.find({
       skip: (paginationOptions.page - 1) * paginationOptions.limit,
       take: paginationOptions.limit,
+      order: {
+        createdAt: 'DESC',
+      },
     });
   }
 
