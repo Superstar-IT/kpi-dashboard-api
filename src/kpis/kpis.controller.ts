@@ -50,13 +50,11 @@ export class KpisController {
       limit = 50;
     }
 
-    return infinityPagination<KpiEntity>(
-      await this.kpisService.findManyKpisWithPagination({
-        page,
-        limit,
-      }),
-      { page, limit },
-    );
+    const [data, count] = await this.kpisService.findManyKpisWithPagination({
+      page,
+      limit,
+    });
+    return infinityPagination<KpiEntity>(data, { page, limit }, count);
   }
 
   @Get(':id')
